@@ -2,8 +2,11 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./writePage.module.css"
 import Image from 'next/image'
-import ReactQuill from 'react-quill';
+import dynamic from "next/dynamic";
+
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.bubble.css";
+
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
