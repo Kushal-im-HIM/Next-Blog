@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import styles from "./singlePage.module.css"
 import Menu from '@/components/Menu/Menu'
